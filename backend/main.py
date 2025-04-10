@@ -30,7 +30,7 @@ class LLM():
         return llm
 
     def initialize_pinecone(self):
-        pc = Pinecone(api_key="pcsk_4jz11t_M8xDodJHwbwAhbPdoazn7RrR6Ekdz3YRk6xRaZ7phxGvD2jUnWtAraJNWjwdUKn")
+        pc = Pinecone(api_key=pinecone_api_key)
         index_name = "indain-tax-system"
         existing_indexes = [index_info['name'] for index_info in pc.list_indexes()]
         if index_name not in existing_indexes:
