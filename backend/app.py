@@ -1,4 +1,4 @@
-from main import LLM
+from llm import LLM
 
 
 from fastapi import FastAPI, Request
@@ -20,7 +20,6 @@ class ChatMessage(BaseModel):
 
 @app.post("/chat")
 async def chat_endpoint(data: ChatMessage):
-    
     obj = LLM()
-    response = obj.llm_chain("who are you")
+    response = obj.llm_chain(data.message)
     return {"response":response }
