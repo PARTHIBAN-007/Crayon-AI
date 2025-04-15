@@ -34,7 +34,7 @@ An AI-powered chatbot built to provide insights into the Indian tax system. It u
 ### 1. Clone the repository
 
 ```bash
-https://github.com/PARTHIBAN-007/Crayon-AI
+git clone https://github.com/PARTHIBAN-007/Crayon-AI
 cd Crayon-AI
 ```
 - Create a Virtual Environment
