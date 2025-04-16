@@ -11,7 +11,6 @@ from langchain_community.tools import Tool
 from langchain.agents import initialize_agent
 from langchain_community.tools.tavily_search import TavilySearchResults
 from dotenv import load_dotenv
-
 load_dotenv()
 gemini_api_key = os.getenv("GEMINI_API_KEY")
 pinecone_api_key = os.getenv("PINECONE_API_KEY")
