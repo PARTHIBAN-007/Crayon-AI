@@ -51,7 +51,7 @@ class LLM():
         embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
         embedding = embeddings.embed_documents(["test"])[0]
         dimension = len(embedding)
-        index_name = "indian-tax-system"
+        index_name = "tax-system-india"
         if not pc.has_index(index_name):
             pc.create_index(
                 name=index_name,
@@ -99,8 +99,4 @@ class LLM():
 
     def llm_chain(self,query:str):
         response = self.agent.invoke(query)
-        self.memory.save_context(
-        {"input": query},
-        {"output": response}
-    )
         return response
